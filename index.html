@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9e2a49de7b.js" crossorigin="anonymous"></script>
+    <style>
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            25% { opacity: 1; }
+            75% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        .changing-text {
+            animation: fadeInOut 5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p id="profession" class="changing-text">Fresher</p>
+            <h1>Hi, I'm <span>Shylaja S</span> <br>From India</h1>
+        </div>
+        <a href="#header" class="home-btn">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+        <script>
+    // Get the home button element
+    const homeButton = document.querySelector('.home-btn');
+
+    // Function to toggle visibility of home button
+    function toggleHomeButton() {
+        // Get the current scroll position
+        const scrollPosition = window.scrollY;
+
+        // Get the height of the header section
+        const headerHeight = document.getElementById('header').offsetHeight;
+
+        // If scroll position is at or above header height, show the button; otherwise, hide it
+        if (scrollPosition >= headerHeight) {
+            homeButton.style.display = 'block';
+        } else {
+            homeButton.style.display = 'none';
+        }
+    }
+
+    // Event listener for scrolling
+    window.addEventListener('scroll', toggleHomeButton);
+
+    // Initial call to set button visibility based on initial scroll position
+    toggleHomeButton();
+</script>
+    </div>
+    
+</div>
+
+<!-- Your existing HTML code continues here -->
+
+<!-- JavaScript for dynamic profession text -->
+<script>
+    const professions = ["Fresher", "Computer Science Student"];
+    const professionElement = document.getElementById("profession");
+    
+    let currentIndex = 0;
+
+    function changeProfession() {
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % professions.length;
+            professionElement.textContent = professions[currentIndex];
+            nameElement.textContent = "New Name"; // Replace "New Name" with your desired text
+        }, 4960); // Change every 5 seconds
+    }
+    changeProfession();
+</script>
+
+
+
+
+        <!---------------about-->
+        <!---------------about-->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/user.jpeg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>A professional Looking for challenging and exciting opportunities which will give a considerable degree of responsibility that enhances my skill and knowledge.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('skills')">Technical Skills</p>
+                            <p class="tab-links active-link" onclick="opentab('experience')">Soft Skills</p> <!-- Added active-link class here -->
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>* M.Sc Computer Science</span><br>Sri Paramakalyani College, MS University, 2021 – 2023<br>Percentage : 91%</li>
+                                <li><span>* B.Sc Computer Science</span><br>Sri Paramakalyani College, MS University, 2018 – 2021<br>Percentage : 93.1%</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="skills">
+                            <ul>
+                                <li><span>* Programming Languages:</span><br>C++, C</li>
+                                <li><span>* Web Development:</span><br>HTML</li>
+                                <li><span>* Database Management:</span><br>Oracle (Basic)</li>
+                                <li><span>* Cloud Computing:</span><br>Fundamentals (Basic)</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents active-tab" id="experience"> <!-- Added active-tab class here -->
+                            <ul>
+                                <li>Hardworking</li>
+                                <li>Quick Learning</li>
+                                <li>Good Communication</li>
+                                <li>Leader of My Team (Teamwork)</li>
+                                <li>Type Writing (English and Tamil)</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+<!-------------------------------------services---------------------------------->
+<div id="works">
+    <div class="container">
+        <h1 class="sub-title">Works</h1>
+        <div class="services-list">
+           
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>IT Developer</h2>
+                <h3>1. Enhancing Agricultural Efficiency through Machine Learning and Image Processing: A Comprehensive Study (2023)</h3>
+                <br></br>
+                <h3>2. Comparative Analysis of Image Segmentation Techniques for Currency Images (2023)</h3><br></br>
+                <h3>3. Blood Bank Management System (2021)</h3>
+                
+                <a href="https://github.com/SHYLAJAS2001/">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-medal"></i>
+                <h2>Certifications</h2>
+                <h3>1. Typewriting exam for English senior grade: first-class with distinction (45 words per minute)</h3>
+                <br></br>
+                <h3>2. Typewriting exam for English junior grade: firstclass with distinction (30 words per minute)</h3>
+                <br></br>
+                <h3>3. Typewriting exam for Tamil junior grade: firstclass (30 words per minute)</h3>
+                
+                <p></p>
+             <a href="https://github.com/SHYLAJAS2001/">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-newspaper"></i>
+                <h2>Achievements </h2>
+                <h3>1. University Rank Holder - Manonmaniam Sundaranar University 9th rank holder in B.Sc. Computer Science</h3>
+                <p></p><br></br>
+                <h3>2. MERIT CERTIFICATE - Awarded the MRS. MARIE BUCK MEMORIAL PRIZE for securing the highest marks in the aggregate in all the papers of M.Sc. Computer Science (2021-2023)</h3>
+                <p></p>
+                <br></br>
+                <h3>3. CO-CURRICULAR - NSS(UNIT NO : 178, VOLUNTEER) - As an NSS volunteer with Unit No. 178, I participated in a 7-day camp at Ravanasamudram, focusing on village cleaning, plantation growth, and road safety awareness.</h3>
+                <a href="https://github.com/SHYLAJAS2001/">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ----------------portfolio-------------------------- -->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h2>Enhancing Agricultural Efficiency through ML (2023)</h2><br></br>
+                    <p>Developed a system using ML for precision agriculture, predicting soil methane and food calories, offering crop recommendations based on environmental factors.</p>
+                    <a href="https://github.com/SHYLAJAS2001/Methane-gas.git"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.jpg">
+                <div class="layer">
+                    <h2>Currency Image Segmentation Analysis (2023)</h2><br></br>
+                    <p>Created a system using Python and OpenCV to detect counterfeit currency through image processing techniques, enhancing clarity and accuracy.</p>
+                    <a href="https://github.com/SHYLAJAS2001/FAKE-CURRENCY.git"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.jpg">
+                <div class="layer">
+                    <h2>Blood Bank Management System (2021)</h2><br></br>
+                    <p>Developed a system with ASP.NET and MySQL to efficiently manage blood stock and donor details, replacing manual processes with a digital solution.</p>
+                    <a href="https://github.com/SHYLAJAS2001/Blood-Bank-Management-System.git"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/SHYLAJAS2001" class="btn">See more</a>
+    </div>
+</div>
+
+<!-- ------------contact------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1>Contact Me</h1>
+            <p><i class="fa-sharp fa-solid fa-envelope"></i> s.shyalaja2001@gmail.com</p>
+            <p><i class="fa-solid fa-square-phone"></i> +91 8778150529</p>
+            <div class="social-icons">
+                  <a href="https://github.com/SHYLAJAS2001"> <i class="fa-brands fa-github"></i></a>
+                  <!-- <a href="https://www.linkedin.com/in/dhanushr2004/"> <i class="fa-brands fa-linkedin"></i></a>
+                  <a href="https://leetcode.com/21eca18/"> <i class="fa-solid fa-laptop-code"></i></a>
+<!-                  <a href="https://stackoverflow.com/users/24230978/dhanush-r"><i class="fa-brands fa-stack-overflow"></i></a> -->
+                  <!-- <a href="https://www.instagram.com/dhanush0119/"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://twitter.com/Dhanush00098105"><i class="fa-brands fa-square-twitter"></i></a>
+                   --> 
+                  
+            
+            </div>
+            
+                <a href="https://drive.google.com/file/d/1DcGDG4UVIhTmKLlHATsKn1ik2FsX19pf/view?usp=sharing" download class="btn btn2">Download Resume</a>
+            </div>
+            
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Shylaja <i class="fa-brands fa-apple"></i></p>
+    </div>
+</div>
+
+
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+   function opentab(tabname){
+    for(tablink of tablinks)
+    {
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents)
+    {
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+   }
+</script>
+<script>
+
+var sidemeu=document.getElementById("sidemenu");
+    
+    function openmenu(){
+        sidemeu.style.right= "0";
+    }
+    function closemenu(){
+        sidemeu.style.right= "-200px";
+    }
+</script>
+</body>
+</html>
